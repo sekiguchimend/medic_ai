@@ -44,7 +44,7 @@ export default function Dashboard() {
       {/* Quick Access Section */}
       <div className="mb-12">
         <div className="flex items-center justify-between mb-4">
-          <h2 className="text-xs font-bold text-gray-500 uppercase tracking-wider">QUICK ACCESS</h2>
+          <h2 className="text-xs font-bold text-gray-500 uppercase tracking-wider">クイックアクセス</h2>
           <button className="text-gray-400 hover:text-gray-600">
             <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -60,7 +60,7 @@ export default function Dashboard() {
             {/* Folder Body */}
             <div className="bg-[#1a73e8] rounded-2xl rounded-tl-none p-6 text-white relative overflow-hidden mt-3 hover:bg-[#1557b0] transition-colors">
               <div className="mb-4">
-                <div className="text-xs font-medium mb-3 opacity-90">SHARED WITH</div>
+                <div className="text-xs font-medium mb-3 opacity-90">共有メンバー</div>
                 <div className="flex -space-x-2">
                   {[1, 2, 3, 4, 5].map((i) => (
                     <div key={i} className="w-8 h-8 rounded-full bg-white/30 border-2 border-[#1a73e8] flex items-center justify-center">
@@ -70,7 +70,7 @@ export default function Dashboard() {
                 </div>
               </div>
               <div className="mt-6">
-                <div className="text-xs font-medium mb-1 opacity-90">FOLDER</div>
+                <div className="text-xs font-medium mb-1 opacity-90">フォルダ</div>
                 <div className="text-sm font-bold">重要記録</div>
               </div>
               <div className="absolute bottom-4 right-4">
@@ -88,7 +88,7 @@ export default function Dashboard() {
             {/* Folder Body */}
             <div className="bg-gray-50 rounded-2xl rounded-tl-none p-6 hover:bg-gray-100 transition-colors mt-3">
               <div className="mb-4">
-                <div className="text-xs font-medium text-gray-500 mb-3">SHARED WITH</div>
+                <div className="text-xs font-medium text-gray-500 mb-3">共有メンバー</div>
                 <div className="flex -space-x-2">
                   {[1, 2, 3].map((i) => (
                     <div key={i} className="w-8 h-8 rounded-full bg-gradient-to-br from-yellow-400 to-orange-500 border-2 border-white flex items-center justify-center text-white">
@@ -98,7 +98,7 @@ export default function Dashboard() {
                 </div>
               </div>
               <div className="mt-6">
-                <div className="text-xs font-medium text-gray-500 mb-1">FOLDER</div>
+                <div className="text-xs font-medium text-gray-500 mb-1">フォルダ</div>
                 <div className="text-sm font-bold text-gray-900">訪問記録</div>
               </div>
             </div>
@@ -111,7 +111,7 @@ export default function Dashboard() {
             {/* Folder Body */}
             <div className="bg-gray-50 rounded-2xl rounded-tl-none p-6 hover:bg-gray-100 transition-colors mt-3">
               <div className="mb-4">
-                <div className="text-xs font-medium text-gray-500 mb-3">SHARED WITH</div>
+                <div className="text-xs font-medium text-gray-500 mb-3">共有メンバー</div>
                 <div className="flex -space-x-2">
                   {[1, 2, 3, 4].map((i) => (
                     <div key={i} className="w-8 h-8 rounded-full bg-gradient-to-br from-green-400 to-blue-500 border-2 border-white flex items-center justify-center text-white">
@@ -121,7 +121,7 @@ export default function Dashboard() {
                 </div>
               </div>
               <div className="mt-6">
-                <div className="text-xs font-medium text-gray-500 mb-1">FOLDER</div>
+                <div className="text-xs font-medium text-gray-500 mb-1">フォルダ</div>
                 <div className="text-sm font-bold text-gray-900">研修資料</div>
               </div>
             </div>
@@ -147,8 +147,8 @@ export default function Dashboard() {
               </div>
             </div>
             <div className="mt-4">
-              <div className="text-xs text-gray-500">LAST MODIFIED</div>
-              <div className="text-xs font-medium text-gray-700">Sept 5, 2019 - 04:45 AM</div>
+              <div className="text-xs text-gray-500">最終更新</div>
+              <div className="text-xs font-medium text-gray-700">2019年9月5日 04:45</div>
             </div>
           </div>
         </div>
@@ -156,26 +156,26 @@ export default function Dashboard() {
 
       {/* All Files Section */}
       <div>
-        <h2 className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-4">ALL FILES</h2>
+        <h2 className="text-xs font-bold text-gray-500 uppercase tracking-wider mb-4">すべてのファイル</h2>
 
         <div className="bg-white">
           {/* Table Header */}
           <div className="grid grid-cols-12 gap-4 px-6 py-3 border-b border-gray-100 text-xs font-medium text-gray-500 uppercase tracking-wider">
-            <div className="col-span-5">NAME</div>
-            <div className="col-span-2">OWNER</div>
-            <div className="col-span-2">LAST MODIFIED</div>
-            <div className="col-span-2">FILE SIZE</div>
+            <div className="col-span-5">ファイル名</div>
+            <div className="col-span-2">所有者</div>
+            <div className="col-span-2">最終更新</div>
+            <div className="col-span-2">サイズ</div>
             <div className="col-span-1"></div>
           </div>
 
           {/* Table Rows */}
           {[
-            { icon: '📄', color: 'blue', name: '佐藤花子_訪問記録.docx', owner: '山田', date: 'Sept 5, 2019 - 12:47 AM', size: '25 MB' },
-            { icon: '📊', color: 'green', name: '田中太郎_看護計画.xlsx', owner: '佐藤', date: 'Sept 5, 2019 - 10:43 PM', size: '5.5 MB' },
-            { icon: '📄', color: 'red', name: '山田良子_バイタル記録.pdf', owner: '鈴木', date: 'Jul 22, 2019 - 08:43 AM', size: '25 MB' },
-            { icon: '📄', color: 'blue', name: '鈴木一郎_服薬管理リスト.docx', owner: '田中', date: 'Jul 13, 2019 - 12:43 AM', size: '25 MB' },
-            { icon: '🖼️', color: 'orange', name: '伊藤美咲_ケア写真.jpg', owner: '山田', date: 'Jul 13, 2019 - 08:43 AM', size: '12 MB', highlight: true },
-            { icon: '🖼️', color: 'orange', name: '高橋健二_状態記録.jpg', owner: '佐藤', date: 'Jul 13, 2019 - 08:43 AM', size: '15 MB' },
+            { icon: '📄', color: 'blue', name: '佐藤花子_訪問記録.docx', owner: '山田', date: '2019年9月5日 00:47', size: '25 MB' },
+            { icon: '📊', color: 'green', name: '田中太郎_看護計画.xlsx', owner: '佐藤', date: '2019年9月5日 22:43', size: '5.5 MB' },
+            { icon: '📄', color: 'red', name: '山田良子_バイタル記録.pdf', owner: '鈴木', date: '2019年7月22日 08:43', size: '25 MB' },
+            { icon: '📄', color: 'blue', name: '鈴木一郎_服薬管理リスト.docx', owner: '田中', date: '2019年7月13日 00:43', size: '25 MB' },
+            { icon: '🖼️', color: 'orange', name: '伊藤美咲_ケア写真.jpg', owner: '山田', date: '2019年7月13日 08:43', size: '12 MB', highlight: true },
+            { icon: '🖼️', color: 'orange', name: '高橋健二_状態記録.jpg', owner: '佐藤', date: '2019年7月13日 08:43', size: '15 MB' },
           ].map((file, idx) => (
             <div
               key={idx}
